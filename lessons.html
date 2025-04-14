@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexcent Landing Page</title>
+
+</head>
+<style>
+  /* Reset and Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    color: #2d3748;
+    background-color: #ffffff;
+    line-height: 1.6;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .logo img {
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    color: #28a745;
+    /* green hover color */
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    /* Place content side by side */
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .text-content {
+    flex: 1;
+    text-align: left;
+    /* Align text to the left */
+  }
+
+  .image-content {
+    flex: 1;
+  }
+
+  .image-content img {
+    width: 100%;
+    max-width: 500px;
+    /* Limit max image size */
+  }
+
+
+  /* Utilities */
+  section {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  h1 span {
+    color: #16a34a;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: #718096;
+  }
+
+  .subtitle {
+    margin-top: 0.5rem;
+  }
+
+  /* Button */
+  button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #15803d;
+  }
+
+  /* Hero Section */
+  .hero {
+    background-color: #f9fafb;
+  }
+
+  /* Clients */
+  .clients .client-logos {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 136px;
+  }
+
+  /* Services */
+  .services {
+    background-color: #f3f4f6;
+  }
+
+  .service-cards {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .service-cards {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0 2rem;
+    }
+  }
+
+  .highlight {
+    justify-content: center;
+    padding: 40px 60px;
+    background-color: #f9f9f9;
+  }
+
+  .content-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .highlight-image img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .highlight-text {
+    max-width: 600px;
+  }
+
+  .highlight-text h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #222;
+  }
+
+  .highlight-text p {
+    font-size: 16px;
+    color: #555;
+    
+    margin-bottom: 20px;
+  }
+
+  .highlight-text button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .highlight-text button:hover {
+    background-color: #218838;
+  }
+/* Main Section Styling */
+.stats-section {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Text Area Styling */
+.text-area {
+  margin-bottom: 40px;
+}
+
+.help-line {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 5px;
+  font-weight: 600px;
+}
+
+.text-area .highlight {
+  font-size: 28px;
+  font-weight: 600;
+  color: #28a745;
+  margin: 0;
+}
+
+.subtext {
+  color: #555;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Grid Layout for Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* Each Stat Block */
+.stat-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+/* Icon Styling */
+.stat-box img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Stat Number and Label */
+.stat-box h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #222;
+}
+
+.stat-box p {
+  margin: 5px 0 0;
+  color: #777;
+}
+  .testimonial {
+  padding: 20px;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.testimonial-image img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.testimonial-text p {
+  margin: 10px 0;
+}
+
+.author span {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 41px;
+  margin-top: 10px;
+}
+
+.client-logos img {
+  width: 80px;
+  height: auto;
+}
+
+.green-link {
+  margin-top: 15px;
+   color: #4CAF4F;
+  
+  padding: 8px 16px;
+  border: none;
+}
+  .case-study {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .case-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .case-content {
+    max-width: 600px;
+  }
+
+  .case-content h2 {
+    margin-top: 0;
+  }
+
+  .case-content button {
+    gap: 450px;
+    padding: 10px 20px;
+    background-color: #4CAF4F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Blog */
+  .blog-cards {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .blog .card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .blog .card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .blog .card p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog .card a {
+    color: #16a34a;
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+
+  @media (min-width: 768px) {
+    .blog-cards {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0 2rem;
+    }
+  }
+
+  /* CTA */
+  .cta {
+    background-color: #f3f4f6;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #1a202c;
+    color: white;
+    padding: 3rem 1rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .footer h3,
+  .footer h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer p,
+  .footer li,
+  .footer span {
+    color: #cbd5e0;
+    font-size: 0.875rem;
+  }
+
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .footer input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border: none;
+    color: #2d3748;
+  }
+
+  @media (min-width: 768px) {
+    .footer-grid {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 2rem;
+    }
+  }
+</style>
+
+<body>
+  <title>Nexcent Navbar</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/Logo (8).png" alt="Logo">
+    </div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Service</a>
+      <a href="#">Feature</a>
+      <a href="#">Product</a>
+      <a href="#">Testimonial</a>
+      <a href="#">FAQ</a>
+      <a href="#">login</a> 
+      <button class="nav-btn">sign up</button> 
+    </nav>
+  </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container"
+        style="display: flex; flex-direction: row; align-items: center; gap: 2rem; padding: 2rem; max-width: 1200px; margin: auto;">
+        <div style="flex: 1; text-align: left;">
+          <h1>Lessons and insights <span>from 8 years</span></h1>
+          <p class="subtitle">Where to grow your business as a photographer: site or social media?</p>
+          <button>Register</button>
+        </div>
+        <div style="flex: 1;">
+          <img src="img/Illustration (2).png" alt="Hero Illustration" style="width: 100%; max-width: 500px;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+      <h2>Our Clients</h2>
+      <p>We have been working with some Fortune 500+ clients</p>
+      <div class="client-logos">
+        <img src="img/Logo (1).png">
+        <img src="img/Logo (2).png">
+        <img src="img/Logo (3).png" />
+        <img src="img/Logo (4).png">
+        <img src="img/Logo (5).png">
+        <img src="img/Logo (6).png">
+        <img src="img/Logo (7).png">
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <h2>Manage your entire community<br>in a single system</h2>
+      <p class="subtitle">Who is Nexcent suitable for?</p>
+      <div class="service-cards">
+        <div class="card">
+          <img src="img/Icon (3).png">
+          <h3>Membership Organisations</h3>
+          <p>Our membership management software provides full automation of membership renewals and payments</p>
+        </div>
+        <div class="card">
+          <img src="img/Icon (1).png">
+          <h3>National Associations</h3>
+          <p>Our membership management software provides full automation of membership renewals and payments</p>
+        </div>
+        <div class="card">
+          <img src="img/Icon (5).png">
+          <h3>Clubs And Groups</h3>
+          <p>Our membership management software provides full automation of membership renewals and payments</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlight">
+      <div class="content-container">
+        <div class="highlight-image">
+          <img src="img/Frame 35.png" alt="Pixelgrade Image">
+        </div>
+        <div class="highlight-text">
+          <h2>The unseen of spending three years at Pixelgrade</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae
+            est
+            varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam
+            pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+            elementum pulvinar odio.</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="text-area">
+        <p class="help-line">Helping a local</p>
+        <h2 class="highlight">business reinvent itself</h2>
+        <p class="subtext">We reached here with our hard work and dedication</p>
+      </div>
+    
+      <div class="stats-grid">
+        <div class="stat-box">
+          <img src="img/Icon (2).png" alt="Members Icon">
+          <div>
+            <h3>2,245,341</h3>
+            <p>Members</p>
+          </div>
+        </div>
+        <div class="stat-box">
+          <img src="img/Icon (4).png" alt="Clubs Icon">
+          <div>
+            <h3>46,328</h3>
+            <p>Clubs</p>
+          </div>
+        </div>
+        <div class="stat-box">
+          <img src="img/Icon (6).png" alt="Event Bookings Icon">
+          <div>
+            <h3>828,867</h3>
+            <p>Event Bookings</p>
+          </div>
+        </div>
+        <div class="stat-box">
+          <img src="img/Icon (7).png" alt="Payments Icon">
+          <div>
+            <h3>1,926,436</h3>
+            <p>Payments</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Case Study -->
+    <section class="case-study">
+      <div class="case-image">
+        <img src="img/pana.png" alt="Case Study Image">
+      </div>
+      <div class="case-content">
+        <h2>How to design your site footer like we did</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae
+          est
+          varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam
+          pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+          elementum pulvinar odio.</p>
+        <button>Learn More</button>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial">
+      <div class="testimonial-content">
+        <div class="testimonial-image">
+          <img src="img/image 9.png" alt="Tesla" />
+        </div>
+        <div class="testimonial-text">
+          <p>“Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt
+            ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut
+            molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit.
+            Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis
+            vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget.
+            Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim
+            finibus ac sit amet magna.”</p>
+          <p class="author">
+            Tim Smith<br>
+            <span>British Dragon Boat Racing Association</span>
+          </p>
+          <div class="client-logos">
+            <img src="img/Logo (1).png">
+            <img src="img/Logo (2).png">
+            <img src="img/Logo (3).png" />
+            <img src="img/Logo (4).png">
+            <img src="img/Logo (5).png">
+            <img src="img/Logo (6).png">
+            <img src="img/Logo (7).png">
+          <a href="#" class="green-link">See More Testimonials</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section class="blog">
+      <h2>Caring is the new marketing</h2>
+      <div class="blog-cards">
+        <div class="card">
+          <img src="img/1.png" />
+          <p>Creating Streamlined Safeguarding Processes with OneRen</p>
+          <a href="#">Readmore →</a>
+        </div>
+        <div class="card">
+          <img src="img/2.png" />
+          <p>What are your safeguarding responsibilities?</p>
+          <a href="#">Readmore →</a>
+        </div>
+        <div class="card">
+          <img src="img/3.png" />
+          <p>Revamping the Membership Model</p>
+          <a href="#">Readmore →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Pellentesque suscipit fringilla libero eu.</h2>
+      <button>Get a Demo →</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>Nexcent</h3>
+          <p>© 2021 Nexcent. All rights reserved.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Stay up to date</h4>
+          <input type="email" placeholder="Your email address">
+        </div>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
