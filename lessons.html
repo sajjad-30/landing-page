@@ -60,6 +60,20 @@
     padding: 22px 0px;
   }
 
+  .login a {
+
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .nav-btn {
+    margin-top: 0;
+    margin-right: 120px;
+  }
+
+
   .nav-links a:hover {
     color: #28a745;
     /* green hover color */
@@ -165,7 +179,7 @@
     gap: 1.5rem;
   }
 
-  .card {
+  .cards {
     height: 260px;
     width: 299px;
 
@@ -175,6 +189,10 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   }
 
+
+  .card-image{
+  width: auto;
+ }
   @media (min-width: 768px) {
     .service-cards {
       grid-template-columns: repeat(3, 1fr);
@@ -190,6 +208,7 @@
   }
 
   .content-container {
+    gap: 32px;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -206,7 +225,7 @@
   .highlight-text {
     display: flex;
     flex-direction: row;
-  
+    text-align: left;
     align-items: center;
     display: inline-block;
     max-width: 600px;
@@ -219,6 +238,7 @@
   }
 
   .highlight-text p {
+
     font-size: 16px;
     color: #555;
     margin-right: 60px;
@@ -227,6 +247,7 @@
 
   .highlight-text button {
     padding: 10px 20px;
+    margin-top: 32px;
     margin-right: 450px;
     background-color: #28a745;
     color: white;
@@ -239,82 +260,73 @@
     background-color: #218838;
   }
 
-  /* Main Section Styling */
   .stats-section {
+    background-color: #f5f8f9;
+    padding: 60px 20px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
-    background-color: #F5F7FA;
-    align-items: flex-start;
+    flex-wrap: wrap;
     justify-content: space-between;
-    font-family: Arial, sans-serif;
-  }
-
-  /* Text Area Styling */
-  .text-area {
-    margin-bottom: 40px;
-  }
-
-  .help-line {
-  
-    font-size: 36px;
-    color: #222;
-    margin-bottom: 5px;
-    font-weight: 600px;
-  }
-
-  .text-area .highlight {
-    font-size: 28px;
-    font-weight: 600;
-    color: #28a745;
-    margin: 0;
-
- display: flex;
-    /* Place content side by side */
     align-items: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: auto
   }
 
-  .subtext {
-    color: #555;
+  .left {
+    flex: 1 1 40%;
+  }
+
+  .left h2 {
+    text-align: left;
+    font-size: 28px;
+    color: #1D1E25;
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+
+  .left h2 span {
+    color: #4CAF50;
+    font-weight: 700;
+  }
+
+  .left p {
+    text-align: left;
+    color: #3c3f46;
+    font-size: 14px;
     margin-top: 10px;
-    font-size: 16px;
   }
 
-  /* Grid Layout for Stats */
-  .stats-grid {
+  .right {
+    flex: 1 1 55%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 25px 40px;
   }
 
-  /* Each Stat Block */
-  .stat-box {
+  .stat {
     display: flex;
     align-items: center;
-    gap: 20px;
-    text-align: left;
+    gap: 15px;
   }
 
-  /* Icon Styling */
-  .stat-box img {
-    width: 40px;
-    height: 40px;
+  .stat img {
+    width: 36px;
+    height: 36px;
   }
 
-  /* Stat Number and Label */
-  .stat-box h3 {
+  .stat .text h3 {
     margin: 0;
-    font-size: 22px;
-    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1D1E25;
   }
 
-  .stat-box p {
-    margin: 5px 0 0;
-    color: #777;
+  .stat .text p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #6B7280;
   }
 
   .testimonial {
@@ -335,10 +347,11 @@
 
 
   .testimonial-text p {
+    text-align: left;
     align-items: center;
-    display: f;    
+    display: f;
     justify-content: space-between;
-align-content: flex-start;
+    align-content: flex-start;
     margin: 10px 0;
   }
 
@@ -376,13 +389,14 @@ align-content: flex-start;
   }
 
   .case-image img {
-    width: 300px;
-    height: auto;
+    width: 441.5px;
+    height: 433.3px;
+
     border-radius: 8px;
   }
 
   .case-content {
-    max-width: 600px;
+    text-align: left;
   }
 
   .case-content h2 {
@@ -399,48 +413,83 @@ align-content: flex-start;
     cursor: pointer;
   }
 
-  /* Blog */
-  .blog-cards {
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+  .cards-section {
+    padding: 50px 20px;
+  }
+  .hero-text {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+  .cards-container {
+    height: 368px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
-  .blog .card {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: left;
+  .card {
+    width: 300px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .blog .card img {
+  .card img {
     width: 100%;
-    border-radius: 0.5rem;
-    margin-bottom: 0.75rem;
+    height: auto;
+    border-radius: 12px;
+    display: block;
   }
 
-  .blog .card p {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  .card-content {
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding: 20px 16px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
-  .blog .card a {
-    color: #16a34a;
-    font-size: 0.875rem;
+  .card-content h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1D1E25;
+    margin-bottom: 12px;
+  }
+
+  .card-content a {
+    color: #34A853;
+    font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
   }
 
-  @media (min-width: 768px) {
-    .blog-cards {
-      grid-template-columns: repeat(3, 1fr);
-      padding: 0 2rem;
-    }
-  }
-
-  /* CTA */
   .cta {
+
     background-color: #f3f4f6;
+  }
+  .cta h2{
+    font-size: 64px;
+    text-align: center;
   }
 
   /* Footer */
@@ -492,7 +541,6 @@ align-content: flex-start;
 
 <body>
   <title>Nexcent Navbar</title>
-  <link rel="stylesheet" href="style.css">
   </head>
 
 
@@ -507,6 +555,7 @@ align-content: flex-start;
       <a href="#">Product</a>
       <a href="#">Testimonial</a>
       <a href="#">FAQ</a>
+
     </nav>
     <div class="login">
       <a href="#">login</a>
@@ -517,8 +566,7 @@ align-content: flex-start;
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container"
-      style="display: flex; flex-direction: row; align-items: center; gap: 2rem; padding: 2rem; max-width: 1200px; margin: auto;">
+    <div class="container">
       <div style="flex: 1; text-align: left;">
         <h1>Lessons and insights <span>from 8 years</span></h1>
         <p class="subtitle">Where to grow your business as a photographer: site or social media?</p>
@@ -550,18 +598,18 @@ align-content: flex-start;
     <h2>Manage your entire community<br>in a single system</h2>
     <p class="subtitle">Who is Nexcent suitable for?</p>
     <div class="service-cards">
-      <div class="card">
-        <img src="img/Icon (3).png">
+      <div class="cards">
+        <img src="img/Icon (3).png" >
         <h3>Membership Organisations</h3>
         <p>Our membership management software provides full automation of membership renewals and payments</p>
       </div>
-      <div class="card">
-        <img src="img/Icon (1).png">
+      <div class="cards">
+        <img src="img/Icon (1).png"class="image">
         <h3>National Associations</h3>
         <p>Our membership management software provides full automation of membership renewals and payments</p>
       </div>
-      <div class="card">
-        <img src="img/Icon (5).png">
+      <div class="cards">
+        <img src="img/Icon (5).png"class="img">
         <h3>Clubs And Groups</h3>
         <p>Our membership management software provides full automation of membership renewals and payments</p>
       </div>
@@ -585,42 +633,44 @@ align-content: flex-start;
   </section>
 
   <section class="stats-section">
-    <div class="text-area">
-      <p class="help-line">Helping a local
-     <span class="highlight"> business reinvent itself</span></p>
-      <p class="subtext">We reached here with our hard work and dedication</p>
+    <div class="container">
+      
+      <div class="left">
+        <h2>Helping a local </br><span>business reinvent itself</span></h2>
+        <p>We reached here with our hard work and dedication</p>
+      </div>
+      <div class="right">
+        <div class="stat">
+          <img src="img/Icon (2).png" alt="Members">
+          <div class="text">
+            <h3>2,245,341</h3>
+            <p>Members</p>
+          </div>
+        </div>
+        <div class="stat">
+          <img src="img/Icon (4).png" alt="Clubs">
+          <div class="text">
+            <h3>46,328</h3>
+            <p>Clubs</p>
+          </div>
+        </div>
+        <div class="stat">
+          <img src="img/Icon (6).png" alt="Events">
+          <div class="text">
+            <h3>828,867</h3>
+            <p>Event Bookings</p>
+          </div>
+        </div>
+        <div class="stat">
+          <img src="img/Icon (7).png" alt="Payments">
+          <div class="text">
+            <h3>1,926,436</h3>
+            <p>Payments</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="stats-grid">
-      <div class="stat-box">
-        <img src="img/Icon (2).png" alt="Members Icon">
-        <div>
-          <h3>2,245,341</h3>
-          <p>Members</p>
-        </div>
-      </div>
-      <div class="stat-box">
-        <img src="img/Icon (4).png" alt="Clubs Icon">
-        <div>
-          <h3>46,328</h3>
-          <p>Clubs</p>
-        </div>
-      </div>
-      <div class="stat-box">
-        <img src="img/Icon (6).png" alt="Event Bookings Icon">
-        <div>
-          <h3>828,867</h3>
-          <p>Event Bookings</p>
-        </div>
-      </div>
-      <div class="stat-box">
-        <img src="img/Icon (7).png" alt="Payments Icon">
-        <div>
-          <h3>1,926,436</h3>
-          <p>Payments</p>
-        </div>
-      </div>
-    </div>
+  </section>
   </section>
   <!-- Case Study -->
   <section class="case-study">
@@ -670,31 +720,44 @@ align-content: flex-start;
     </div>
   </section>
 
-  <!-- Blog Preview -->
-  <section class="blog">
-    <h2>Caring is the new marketing</h2>
-    <div class="blog-cards">
+  <section class="cards-section">
+    <section class="hero-text">
+      <h2>Caring is the new marketing</h2>
+      <p>
+        The Nexcent blog is the best place to read about the latest membership insights, trends and more.
+        See who's joining the community, read about how our community are increasing their membership income and lot’s more.
+      </p>
+    </section>
+    <div class="cards-container">
       <div class="card">
-        <img src="img/1.png" />
-        <p>Creating Streamlined Safeguarding Processes with OneRen</p>
-        <a href="#">Readmore →</a>
+        <img src="img/image 18 (1).png" alt="Card 1">
+        <div class="card-content">
+          <h3>Creating Streamlined Safeguarding Processes with OneRen</h3>
+          <a href="#">Readmore →</a>
+        </div>
       </div>
       <div class="card">
-        <img src="img/2.png" />
-        <p>What are your safeguarding responsibilities?</p>
-        <a href="#">Readmore →</a>
+        <img src="img/image 19.png" alt="Card 2">
+        <div class="card-content">
+          <h3>What are your safeguarding responsibilities and how can you manage them?</h3>
+          <a href="#">Readmore →</a>
+        </div>
       </div>
       <div class="card">
-        <img src="img/3.png" />
-        <p>Revamping the Membership Model</p>
-        <a href="#">Readmore →</a>
+        <img src="img/image 20.png" alt="Card 3">
+        <div class="card-content">
+          <h3>Revamping the Membership Model with Triathlon Australia</h3>
+          <a href="#">Readmore →</a>
+        </div>
       </div>
     </div>
   </section>
 
+
+
   <!-- CTA -->
   <section class="cta">
-    <h2>Pellentesque suscipit fringilla libero eu.</h2>
+    <h2>Pellentesque suscipit <br>fringilla libero eu.</h2>
     <button>Get a Demo →</button>
   </section>
 
