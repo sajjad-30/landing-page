@@ -1,96 +1,774 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Whac-a-mole</title>
-    <style>
-        .grid {
-            width: 606px;
-            height: 606px;
-            display: flex;
-            flex-wrap: wrap;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexcent Landing Page</title>
 
-        .square {
-            height: 200px;
-            width: 200px;
-            border: solid black 1px;
-        }
-
-        .mole {
-            background-image: url("img/image.png");
-            background-size: cover;
-        }
-    </style>
 </head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    color: #2d3748;
+    background-color: #ffffff;
+    line-height: 1.6;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 60px;
+    padding-right: 0%;
+    background-color: #f5f7fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .logo img {
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .login {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 22px 0px;
+  }
+
+  .login a {
+
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .nav-btn {
+    margin-top: 0;
+    margin-right: 120px;
+  }
+
+
+  .nav-links a:hover {
+    color: #28a745;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .text-content {
+    flex: 1;
+    text-align: left;
+    
+  }
+
+  .image-content {
+    flex: 1;
+  }
+
+  .image-content img {
+    width: 100%;
+    max-width: 500px;
+    
+  }  
+  section {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  h1 span {
+    color: #16a34a;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: #718096;
+  }
+  .subtitle {
+    margin-top: 0.5rem;
+  }
+  button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #15803d;
+  }
+  .hero {
+    background-color: #f9fafb;
+  }
+  .clients .client-logos {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 136px;
+  }
+  .services {
+    background-color: #f3f4f6;
+  }
+
+  .service-cards {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .cards {
+    height: 260px;
+    width: 299px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .service-cards {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0 2rem;
+    }
+  }
+
+  .highlight {
+    justify-content: center;
+    align-items: center;
+    padding: 40px 60px;
+    background-color: #f9f9f9;
+  }
+
+  .content-container {
+    gap: 32px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+  }
+
+  .highlight-image img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .highlight-text {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    display: inline-block;
+    max-width: 600px;
+  }
+
+  .highlight-text h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #222;
+  }
+
+  .highlight-text p {
+
+    font-size: 16px;
+    color: #555;
+    margin-right: 60px;
+    margin-bottom: 20px;
+  }
+
+  .highlight-text button {
+    padding: 10px 20px;
+    margin-top: 32px;
+    margin-right: 450px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .highlight-text button:hover {
+    background-color: #218838;
+  }
+
+  .stats-section {
+    background-color: #f5f8f9;
+    padding: 60px 20px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left {
+    flex: 1 1 40%;
+  }
+
+  .left h2 {
+    text-align: left;
+    font-size: 28px;
+    color: #1D1E25;
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+
+  .left h2 span {
+    color: #4CAF50;
+    font-weight: 700;
+  }
+
+  .left p {
+    text-align: left;
+    color: #3c3f46;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .right {
+    flex: 1 1 55%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 40px;
+  }
+
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .stat img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat .text h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1D1E25;
+  }
+
+  .stat .text p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #6B7280;
+  }
+
+  .testimonial {
+    padding: 20px;
+  }
+
+  .testimonial-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .testimonial-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+
+  .testimonial-text p {
+    text-align: left;
+    align-items: center;
+    display: f;
+    justify-content: space-between;
+    align-content: flex-start;
+    margin: 10px 0;
+  }
+
+  .author span {
+    color: #555;
+    font-size: 0.9em;
+  }
+
+  .client-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 41px;
+    margin-top: 10px;
+  }
+
+  .client-logos img {
+    width: 80px;
+    height: auto;
+  }
+
+  .green-link {
+    margin-top: 15px;
+    color: #4CAF4F;
+
+    padding: 8px 16px;
+    border: none;
+  }
+
+  .case-study {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .case-image img {
+    width: 441.5px;
+    height: 433.3px;
+
+    border-radius: 8px;
+  }
+
+  .case-content {
+    text-align: left;
+  }
+
+  .case-content h2 {
+    margin-top: 0;
+  }
+
+  .case-content button {
+    gap: 450px;
+    padding: 10px 20px;
+    background-color: #4CAF4F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .cards-section {
+    padding: 50px 20px;
+  }
+  .hero-text {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+  .cards-container {
+    height: 368px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 300px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .card-content {
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding: 20px 16px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-content h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1D1E25;
+    margin-bottom: 12px;
+  }
+
+  .card-content a {
+    color: #34A853;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .cta {
+
+    background-color: #f3f4f6;
+  }
+  .cta h2{
+    font-size: 64px;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #1a202c;
+    color: white;
+    padding: 3rem 1rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .footer h3,
+  .footer h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer p,
+  .footer li,
+  .footer span {
+    color: #cbd5e0;
+    font-size: 0.875rem;
+  }
+
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .footer input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border: none;
+    color: #2d3748;
+  }
+
+  @media (min-width: 768px) {
+    .footer-grid {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 2rem;
+    }
+  }
+
+
+</style>
+
 <body>
-    <h2>Your score:</h2>
-    <h2 id="score">0</h2>
+  <title>Landing-page</title>
+  </head>
 
-    <h2>Time Left:</h2>
-    <h2 id="time-left">60</h2>
 
-    <div class="grid">
-        <div class="square" id="1"></div>
-        <div class="square" id="2"></div>
-        <div class="square" id="3"></div>
-        <div class="square" id="4"></div>
-        <div class="square" id="5"></div>
-        <div class="square" id="6"></div>
-        <div class="square" id="7"></div>
-        <div class="square" id="8"></div>
-        <div class="square" id="9"></div>
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/Logo (8).png" alt="Logo">
+    </div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Service</a>
+      <a href="#">Feature</a>
+      <a href="#">Product</a>
+      <a href="#">Testimonial</a>
+      <a href="#">FAQ</a>
+
+    </nav>
+    <div class="login">
+      <a href="#">login</a>
+      <button class="nav-btn">sign up</button>
     </div>
 
-    <script>const squares = document.querySelectorAll('.square')
-        const mole = document.querySelector('.mole')
-        const timeLeft = document.querySelector('#time-left')
-        const score = document.querySelector('#score')
+  </header>
 
-        let result = 0
-        let hitPosition
-        let currentTime = 60
-        let timerId = null
+  <section class="hero">
+    <div class="container">
+      <div style="flex: 1; text-align: left;">
+        <h1>Lessons and insights <span>from 8 years</span></h1>
+        <p class="subtitle">Where to grow your business as a photographer: site or social media?</p>
+        <button>Register</button>
+      </div>
+      <div style="flex: 1;">
+        <img src="img/Illustration (2).png" alt="Hero Illustration" style="width: 100%; max-width: 500px;" />
+      </div>
+    </div>
+  </section>
 
-        function randomSquare() {
-            squares.forEach(square => {
-                square.classList.remove('mole')
-            })
 
-            let randomSquare = squares[Math.floor(Math.random() * 9)]
-            randomSquare.classList.add('mole')
+  <section class="clients">
+    <h2>Our Clients</h2>
+    <p>We have been working with some Fortune 500+ clients</p>
+    <div class="client-logos">
+      <img src="img/Logo (1).png">
+      <img src="img/Logo (2).png">
+      <img src="img/Logo (3).png" />
+      <img src="img/Logo (4).png">
+      <img src="img/Logo (5).png">
+      <img src="img/Logo (6).png">
+      <img src="img/Logo (7).png">
+    </div>
+  </section>
 
-            hitPosition = randomSquare.id
-        }
+ 
+  <section class="services">
+    <h2>Manage your entire community<br>in a single system</h2>
+    <p class="subtitle">Who is Nexcent suitable for?</p>
+    <div class="service-cards">
+      <div class="cards">
+        <img src="img/Icon (3).png" >
+        <h3>Membership Organisations</h3>
+        <p>Our membership management software provides full automation of membership renewals and payments</p>
+      </div>
+      <div class="cards">
+        <img src="img/Icon (1).png">
+        <h3>National Associations</h3>
+        <p>Our membership management software provides full automation of membership renewals and payments</p>
+      </div>
+      <div class="cards">
+        <img src="img/Icon (5).png">
+        <h3>Clubs And Groups</h3>
+        <p>Our membership management software provides full automation of membership renewals and payments</p>
+      </div>
+    </div>
+  </section>
 
-        squares.forEach(square => {
-            square.addEventListener('mousedown', () => {
-                if (square.id == hitPosition) {
-                    result++
-                    score.textContent = result
-                    hitPosition = null
-                }
-            })
-        })
+  <section class="highlight">
+    <div class="content-container">
+      <div class="highlight-image">
+        <img src="img/Frame 35.png" alt="Pixelgrade Image">
+      </div>
+      <div class="highlight-text">
+        <h2>The unseen of spending three years at Pixelgrade</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae
+          estvarius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam
+          pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem.
+          Donecelementum pulvinar odio.</p>
+        <button>Learn More</button>
+      </div>
+    </div>
+  </section>
 
-        function moveMole() {
-            timerId = setInterval(randomSquare, 500)
-        }
+  <section class="stats-section">
+    <div class="container">
+      
+      <div class="left">
+        <h2>Helping a local </br><span>business reinvent itself</span></h2>
+        <p>We reached here with our hard work and dedication</p>
+      </div>
+      <div class="right">
+        <div class="stat">
+          <img src="img/Icon (2).png" alt="Members">
+          <div class="text">
+            <h3>2,245,341</h3>
+            <p>Members</p>
+          </div>
+        </div>
+        <div class="stat">
+          <img src="img/Icon (4).png" alt="Clubs">
+          <div class="text">
+            <h3>46,328</h3>
+            <p>Clubs</p>
+          </div>
+        </div>
+        <div class="stat">
+          <img src="img/Icon (6).png" alt="Events">
+          <div class="text">
+            <h3>828,867</h3>
+            <p>Event Bookings</p>
+          </div>
+        </div>
+        <div class="stat">
+          <img src="img/Icon (7).png" alt="Payments">
+          <div class="text">
+            <h3>1,926,436</h3>
+            <p>Payments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
+  
+  <section class="case-study">
+    <div class="case-image">
+      <img src="img/pana.png" alt="Case Study Image">
+    </div>
+    <div class="case-content">
+      <h2>How to design your site footer like we did</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae
+        est
+        varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam
+        pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+        elementum pulvinar odio.</p>
+      <button>Learn More</button>
+    </div>
+  </section>
 
-        moveMole()
+  
+  <section class="testimonial">
+    <div class="testimonial-content">
+      <div class="testimonial-image">
+        <img src="img/image 9.png" alt="Tesla" />
+      </div>
+      <div class="testimonial-text">
+        <p>“Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt
+          ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut
+          molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit.
+          Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis
+          vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget.
+          Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim
+          finibus ac sit amet magna.”</p>
+        <p class="author">
+          Tim Smith<br>
+          <span>British Dragon Boat Racing Association</span>
+        </p>
+        <div class="client-logos">
+          <img src="img/Logo (1).png">
+          <img src="img/Logo (2).png">
+          <img src="img/Logo (3).png" />
+          <img src="img/Logo (4).png">
+          <img src="img/Logo (5).png">
+          <img src="img/Logo (6).png">
+          <img src="img/Logo (7).png">
+          <a href="#" class="green-link">See More Testimonials</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        function countDown() {
-            currentTime--
-            timeLeft.textContent = currentTime
+  <section class="cards-section"> 
+    <section class="hero-text">
+      <h2>Caring is the new marketing</h2>
+      <p>
+        The Nexcent blog is the best place to read about the latest membership insights, trends and more.
+        See who's joining the community, read about how our community are increasing their membership income and lot’s more.
+      </p>
+    </section>
+    <div class="cards-container">
+      <div class="card">
+        <img src="img/image 18 (1).png" alt="Card 1">
+        <div class="card-content">
+          <h3>Creating Streamlined Safeguarding Processes with OneRen</h3>
+          <a href="#">Readmore →</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/image 19.png" alt="Card 2">
+        <div class="card-content">
+          <h3>What are your safeguarding responsibilities and how can you manage them?</h3>
+          <a href="#">Readmore →</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/image 20.png" alt="Card 3">
+        <div class="card-content">
+          <h3>Revamping the Membership Model with Triathlon Australia</h3>
+          <a href="#">Readmore →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            if (currentTime == 0) {
-                clearInterval(countDownTimerId)
-                clearInterval(timerId)
-                alert('GAME OVER! Your final score is ' + result)
-            }
+  <section class="cta">
+    <h2>Pellentesque suscipit <br>fringilla libero eu.</h2>
+    <button>Get a Demo →</button>
+  </section>
 
-        }
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Nexcent</h3>
+        <p>© 2021 Nexcent. All rights reserved.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help center</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stay up to date</h4>
+        <input type="email" placeholder="Your email address">
+      </div>
+    </div>
+  </footer>
 
-        let countDownTimerId = setInterval(countDown, 1000)</script>
 </body>
+
 </html>
