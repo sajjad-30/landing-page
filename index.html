@@ -93,7 +93,7 @@
   .text-content {
     flex: 1;
     text-align: left;
-    
+
   }
 
   .image-content {
@@ -103,8 +103,9 @@
   .image-content img {
     width: 100%;
     max-width: 500px;
-    
-  }  
+
+  }
+
   section {
     padding: 4rem 1rem;
     text-align: center;
@@ -114,6 +115,7 @@
     font-size: 2.5rem;
     font-weight: bold;
   }
+
   h1 span {
     color: #16a34a;
   }
@@ -127,9 +129,11 @@
   p {
     color: #718096;
   }
+
   .subtitle {
     margin-top: 0.5rem;
   }
+
   button {
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
@@ -143,9 +147,11 @@
   button:hover {
     background-color: #15803d;
   }
+
   .hero {
     background-color: #f9fafb;
   }
+
   .clients .client-logos {
     margin-top: 16px;
     display: flex;
@@ -153,6 +159,7 @@
     justify-content: center;
     gap: 136px;
   }
+
   .services {
     background-color: #f3f4f6;
   }
@@ -162,7 +169,7 @@
     display: grid;
     gap: 1.5rem;
   }
-  
+
   .cards {
     height: 260px;
     width: 299px;
@@ -288,7 +295,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-  }
+    }
 
   .stat img {
     width: 36px;
@@ -395,25 +402,27 @@
   .cards-section {
     padding: 50px 20px;
   }
+
   .hero-text {
-  max-width: 800px;
-  margin: 0 auto 40px;
-  text-align: center;
-  padding: 0 16px;
-}
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    padding: 0 16px;
+  }
 
-.hero-text h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #2e2e2e;
-  margin-bottom: 12px;
-}
+  .hero-text h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2e2e2e;
+    margin-bottom: 12px;
+  }
 
-.hero-text p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-}
+  .hero-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+
   .cards-container {
     height: 368px;
     display: flex;
@@ -466,7 +475,8 @@
 
     background-color: #f3f4f6;
   }
-  .cta h2{
+
+  .cta h2 {
     font-size: 64px;
     text-align: center;
   }
@@ -517,6 +527,188 @@
     }
   }
 
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+  .nav-links a {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  .nav-btn {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .navbar {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .nav-links {
+    flex: 1;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    margin: 5px 8px;
+  }
+
+  .login {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+
+  .hero-img img {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  
+  .clients {
+    padding: 30px 20px;
+  }
+
+  .clients-logo {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+ 
+  .service-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .highlight .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .highlight img {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+  .numbers {
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .number-item {
+    width: 45%;
+  }
+
+
+  .testimonial-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+
+  .cta h2 {
+    font-size: 30px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .cta a {
+    margin-top: 20px;
+  }
+  
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 100px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    margin: 3px 6px;
+  }
+
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .highlight img {
+    max-width: 100%;
+  }
+
+  .number-item {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .cta h2 {
+    font-size: 26px;
+  }
+}
 
 </style>
 
@@ -573,13 +765,13 @@
     </div>
   </section>
 
- 
+
   <section class="services">
     <h2>Manage your entire community<br>in a single system</h2>
     <p class="subtitle">Who is Nexcent suitable for?</p>
     <div class="service-cards">
       <div class="cards">
-        <img src="img/Icon (3).png" >
+        <img src="img/Icon (3).png">
         <h3>Membership Organisations</h3>
         <p>Our membership management software provides full automation of membership renewals and payments</p>
       </div>
@@ -614,7 +806,7 @@
 
   <section class="stats-section">
     <div class="container">
-      
+
       <div class="left">
         <h2>Helping a local </br><span>business reinvent itself</span></h2>
         <p>We reached here with our hard work and dedication</p>
@@ -652,7 +844,7 @@
     </div>
   </section>
   </section>
-  
+
   <section class="case-study">
     <div class="case-image">
       <img src="img/pana.png" alt="Case Study Image">
@@ -668,7 +860,7 @@
     </div>
   </section>
 
-  
+
   <section class="testimonial">
     <div class="testimonial-content">
       <div class="testimonial-image">
@@ -700,14 +892,16 @@
     </div>
   </section>
 
-  <section class="cards-section"> 
+  <section class="cards-section">
     <section class="hero-text">
       <h2>Caring is the new marketing</h2>
       <p>
         The Nexcent blog is the best place to read about the latest membership insights, trends and more.
-        See who's joining the community, read about how our community are increasing their membership income and lot’s more.
+        See who's joining the community, read about how our community are increasing their membership income and lot’s
+        more.
       </p>
-    </section>
+        
+    </section>
     <div class="cards-container">
       <div class="card">
         <img src="img/image 18 (1).png" alt="Card 1">
