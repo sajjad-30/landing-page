@@ -21,8 +21,8 @@
     line-height: 1.6;
   }
 
-    
- 
+
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -40,6 +40,7 @@
     font-weight: bold;
     color: #222;
   }
+
   .logo img {
     height: 30px;
     margin-right: 10px;
@@ -291,11 +292,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 40px;
   }
+
   .stat {
     display: flex;
     align-items: center;
     gap: 15px;
-    }
+  }
 
   .stat img {
     width: 36px;
@@ -335,10 +337,10 @@
   .testimonial-text p {
     text-align: left;
     align-items: center;
-    display: f;
     justify-content: space-between;
     align-content: flex-start;
     margin: 10px 0;
+    line-height: 1.5;
   }
 
   .author span {
@@ -424,13 +426,12 @@
   }
 
   .cards-container {
-    height: 368px;
+  
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
+   
   }
 
   .card {
@@ -442,7 +443,7 @@
   }
 
   .card img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 12px;
     display: block;
@@ -526,94 +527,6 @@
       padding: 0 2rem;
     }
   }
- 
-
-
-@media screen and (max-width: 1024px) {
-  .container, .section {
-    flex-direction: column;
-    padding: 40px 24px;
-    text-align: center;
-  }
-
-  .hero-text, .section-text {
-    max-width: 100%;
-    margin: 0 auto 20px;
-  }
-
-  .hero-image img, .section-image img {
-    max-width: 80%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .features, .clients, .cards, .footer-columns {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
-  }
-
-  .card, .feature, .client-logo {
-    width: 100%;
-    max-width: 500px;
-  }
-}
-
-@media screen and (max-width: 693px) {
-  .navbar, .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .hero h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .section h2 {
-    font-size: 1.5rem;
-  }
-
-  .btn {
-    padding: 12px 24px;
-    font-size: 1rem;
-  }
-
-  .footer-columns {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-
-@media screen and (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p, .section p {
-    font-size: 0.95rem;
-  }
-
-  .btn {
-    width: 100%;
-    font-size: 0.95rem;
-  }
-
-  .card, .feature, .client-logo {
-    width: 100%;
-  }
-
-  .footer-columns {
-    gap: 24px;
-  }
-}
-
 
 </style>
 
